@@ -34,6 +34,7 @@ Functional constructor <br>
             }
     
             public Person build() {
+                // do your object validation here
                 return itself;
             }
         }
