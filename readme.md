@@ -1,4 +1,9 @@
-The most accurate and safe java8+ Object functional builder with lambdas
+The most accurate and safe java8+ builder pattern.
+
+Immutable object <br>
+Safe modificators <br>
+Clean code <br>
+Functional constructor <br>
 
     public class Person {
     
