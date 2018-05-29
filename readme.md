@@ -1,4 +1,4 @@
-The most accurate and safe java8+ builder pattern.
+The most elegant and safe java8+ builder pattern.
 
 Immutable object <br>
 Safe modificators <br>
