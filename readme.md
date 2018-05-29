@@ -50,3 +50,10 @@ Usage:
         .and((x) -> x.withName("name"))
         .and((y)-> y.withLastName("last name"))
         .build();
+
+    Person p3 = Person.builder.get()
+        .and($ -> {
+            $.withName("name");
+            $.withLastName("last name");
+            })
+        .build();
