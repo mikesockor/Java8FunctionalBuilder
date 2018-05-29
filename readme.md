@@ -1,4 +1,4 @@
-The most elegant and safe java8+ builder pattern.
+The most elegant and safe java8+ advanced builder pattern using lambda.
 
 Immutable object <br>
 Safe modificators <br>
@@ -58,3 +58,8 @@ Usage:
             $.withLastName("last name");
             })
         .build();
+
+that "advanced" pattern https://medium.com/beingprofessional/think-functional-advanced-builder-pattern-using-lambda-284714b85ed5
+and many others required duplicate fields in Builder class with New invocation, which is ridiculous
+
+ 
