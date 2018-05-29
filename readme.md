@@ -62,4 +62,9 @@ Usage:
 that "advanced" pattern https://medium.com/beingprofessional/think-functional-advanced-builder-pattern-using-lambda-284714b85ed5
 and many others required duplicate fields in Builder class with New invocation, which is ridiculous
 
+that "advanced" pattern http://benjiweber.co.uk/blog/2014/11/02/builder-pattern-with-java-8-lambdas/
+required some order of interfaces or boilerplate of interfaces
+
+the rest of patterns use Setters which not safe 
+
  
