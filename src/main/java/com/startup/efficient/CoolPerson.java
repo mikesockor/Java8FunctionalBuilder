@@ -19,7 +19,7 @@ public final class CoolPerson extends Builder<CoolPerson> {
         this.lastName = null;
     }
 
-    public static Supplier<Builder<CoolPerson>> builder = CoolPerson::new;
+    public static final Supplier<Builder<CoolPerson>> builder = CoolPerson::new;
 
 }
 
