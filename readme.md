@@ -18,12 +18,28 @@ Functional constructor <br>
     
             Person itself;
     
+            // imperative kinda setters
             public void withName(String name) {
                 itself.name = name;
             }
     
+            // imperative kinda setters
             public void withLastName(String lastName) {
                 itself.lastName = lastName;
+            }
+    
+            // reflection way
+            public void setField(String fieldName, Object object) {
+                try {
+                    Class classOf = itself.getClass();
+                    Field field = classOf.getDeclaredField(fieldName);
+                    field.setAccessible(true);
+                    field.set(itself, object);
+                    field.setAccessible(false);
+                }
+                catch (IllegalAccessException | NoSuchFieldException e) {
+                    e.printStackTrace();
+                }
             }
     
             PersonBuilder() {
