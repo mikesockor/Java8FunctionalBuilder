@@ -125,6 +125,11 @@ and many others required duplicate fields in Builder class with New invocation, 
 that "advanced" pattern http://benjiweber.co.uk/blog/2014/11/02/builder-pattern-with-java-8-lambdas/
 required some order of interfaces or boilerplate of interfaces
 
+https://projectlombok.org required additional dependency, which is good actually, but not working with java 10 as for now
+and in some cases Builder annotation not working with some combination with another annotations
+
+http://immutables.github.io will give you exactly that you need, but it will create a Proxy classes for each your class
+   
 the rest of patterns use Setters which not safe 
 
  
