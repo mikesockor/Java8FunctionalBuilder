@@ -86,7 +86,7 @@ using reflection
 
 ###Usage case2:
 
-You can also just extend Builder class like
+You can also just extend <a href="https://github.com/mikesockor/Java8FunctionalBuilder/blob/master/src/main/java/com/startup/efficient/Builder.java">Builder</a> class like
 
     public final class CoolPerson extends Builder<CoolPerson> {
     
