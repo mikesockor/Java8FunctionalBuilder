@@ -1,9 +1,9 @@
 The most elegant and safe java8+ advanced builder pattern using lambda.
 
-Immutable object <br>
-Safe modificators <br>
-Clean code <br>
-Functional constructor <br>
+- Immutable object 
+- Safe modificators 
+- Clean code 
+- Functional constructor 
 
 ###Usage case1:
 
@@ -131,5 +131,7 @@ and in some cases Builder annotation not working with some combination with anot
 http://immutables.github.io will give you exactly that you need, but it will create a Proxy classes for each your class
    
 the rest of patterns use Setters which not safe 
+
+_only one thing is waiting for you, once you have chosen 'reflection' - you might not get an error on compilation time_  
 
  
