@@ -3,11 +3,8 @@ package com.startup.efficient;
 import java.lang.reflect.Field;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public abstract class Builder<T> {
-
-    private Supplier<T> supplier;
 
     // reflection way
     public final BiConsumer<String, Object> setter = (fieldName,object)-> {
