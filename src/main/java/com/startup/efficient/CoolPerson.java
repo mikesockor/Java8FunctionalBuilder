@@ -4,14 +4,19 @@ import java.util.function.Supplier;
 
 public final class CoolPerson extends Builder<CoolPerson> {
 
-    private String name;
-    private String lastName;
+    private final String name;
+    private final String lastName;
 
     public String getName() {
         return name;
     }
     public String getLastName() {
         return lastName;
+    }
+
+    private CoolPerson() {
+        this.name = null;
+        this.lastName = null;
     }
 
     public static Supplier<Builder<CoolPerson>> builder = CoolPerson::new;

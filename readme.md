@@ -90,14 +90,19 @@ You can also just extend Builder class like
 
     public class CoolPerson extends Builder<CoolPerson> {
     
-        private String name;
-        private String lastName;
+        private final String name;
+        private final String lastName;
     
         public String getName() {
             return name;
         }
         public String getLastName() {
             return lastName;
+        }
+    
+        private CoolPerson() {
+            this.name = null;
+            this.lastName = null;
         }
     
         public static Supplier<Builder<CoolPerson>> builder = CoolPerson::new;
