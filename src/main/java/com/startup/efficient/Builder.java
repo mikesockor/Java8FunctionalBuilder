@@ -10,7 +10,7 @@ public abstract class Builder<T> {
     private Supplier<T> supplier;
 
     // reflection way
-    public BiConsumer<String, Object> setter = (fieldName,object)-> {
+    public final BiConsumer<String, Object> setter = (fieldName,object)-> {
         try {
             Class classOf = this.getClass();
             Field field = classOf.getDeclaredField(fieldName);
@@ -23,12 +23,12 @@ public abstract class Builder<T> {
         }
     };
 
-    public Builder<T> and(Consumer<Builder<T>> input) {
+    public final Builder<T> and(Consumer<Builder<T>> input) {
         input.accept(this);
         return this;
     }
 
-    public T build() {
+    public final T build() {
         return (T) this;
     }
 }

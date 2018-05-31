@@ -105,7 +105,7 @@ You can also just extend Builder class like
             this.lastName = null;
         }
     
-        public static Supplier<Builder<CoolPerson>> builder = CoolPerson::new;
+        public static final Supplier<Builder<CoolPerson>> builder = CoolPerson::new;
     
     }
 
