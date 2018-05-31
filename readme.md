@@ -43,21 +43,31 @@ Functional constructor <br>
 
 Usage:
 
-    Person p1 = Person.builder.get()
+    Person person = Person.builder.get()
         .and( x -> x.withName("name"))
         .build();
 
-    Person p2 = Person.builder.get()
+    Person person = Person.builder.get()
         .and((x) -> x.withName("name"))
         .and((y)-> y.withLastName("last name"))
         .build();
 
-    Person p3 = Person.builder.get()
+    Person person = Person.builder.get()
         .and($ -> {
             $.withName("name");
             $.withLastName("last name");
             })
         .build();
+
+Or using reflection
+        
+    Person person = Person.builder.get()
+        .and($ -> {
+            $.setField("name", "Johny");
+            $.setField("lastName", "Be Good");
+        })
+        .build();
+
 
 that "advanced" pattern https://medium.com/beingprofessional/think-functional-advanced-builder-pattern-using-lambda-284714b85ed5
 and many others required duplicate fields in Builder class with New invocation, which is ridiculous
