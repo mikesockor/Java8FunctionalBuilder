@@ -88,7 +88,7 @@ using reflection
 
 You can also just extend Builder class like
 
-    public class CoolPerson extends Builder<CoolPerson> {
+    public final class CoolPerson extends Builder<CoolPerson> {
     
         private final String name;
         private final String lastName;
