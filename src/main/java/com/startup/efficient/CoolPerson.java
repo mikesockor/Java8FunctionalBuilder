@@ -2,7 +2,7 @@ package com.startup.efficient;
 
 import java.util.function.Supplier;
 
-public class CoolPerson extends Builder<CoolPerson> {
+public final class CoolPerson extends Builder<CoolPerson> {
 
     private String name;
     private String lastName;
