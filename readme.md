@@ -5,6 +5,8 @@ Safe modificators <br>
 Clean code <br>
 Functional constructor <br>
 
+###Usage case1:
+
     public class Person {
     
         private String name;
@@ -41,8 +43,6 @@ Functional constructor <br>
     
     }
 
-Usage:
-
     Person person = Person.builder.get()
         .and( x -> x.withName("name"))
         .build();
@@ -59,12 +59,41 @@ Usage:
             })
         .build();
 
-Or using reflection
+using reflection
         
     Person person = Person.builder.get()
         .and($ -> {
             $.setField("name", "Johny");
             $.setField("lastName", "Be Good");
+        })
+        .build();
+
+###Usage case2:
+
+You can also just extend Builder class like
+
+    public class CoolPerson extends Builder<CoolPerson> {
+    
+        private String name;
+        private String lastName;
+    
+        public String getName() {
+            return name;
+        }
+        public String getLastName() {
+            return lastName;
+        }
+    
+        public static Supplier<Builder<CoolPerson>> builder = CoolPerson::new;
+    
+    }
+
+and use it in more efficient way
+
+    CoolPerson person = CoolPerson.builder.get()
+        .and($ -> {
+            $.setter.accept("name", "Johny");
+            $.setter.accept("lastName", "Be Good");
         })
         .build();
 
